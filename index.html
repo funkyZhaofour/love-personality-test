@@ -9,9 +9,10 @@
 <body>
   <main class="wrap">
     <section id="home" class="card hero">
-      <div class="pill">恋爱人格测试 · 96题完整版</div>
+      <div class="pill">恋爱人格测试 · 互动版</div>
       <h1>测测你在恋爱里是什么样的人</h1>
-      <p>这不是判断好坏，而是帮你看见自己的亲密需求、边界感、情绪稳定、沟通能力、责任感和现实规划。</p>
+      <p id="inviteNotice" class="notice hidden"></p>
+      <p>你可以自己测，也可以分享给朋友一起玩。做完后可以选择：普通分享，或者邀请朋友配对分析。</p>
       <button id="startBtn">开始测试</button>
       <p class="small">选项：A 更像我 / B 看情况 / C 不太像我。预计 6–10 分钟。</p>
     </section>
@@ -54,9 +55,44 @@
         <div class="footer-note">恋爱人格测试 · 结果仅供自我了解与娱乐参考</div>
       </div>
 
-      <button id="saveImageBtn">生成分享图片</button>
+      <div class="action-grid">
+        <button id="shareTestBtn">分享给朋友一起测</button>
+        <button id="inviteBtn">邀请朋友配对分析</button>
+      </div>
+
+      <button id="saveImageBtn" class="ghost">生成我的结果图片</button>
       <button id="copyBtn" class="ghost">复制我的结果</button>
       <button id="restartBtn" class="ghost">重新测试</button>
+    </section>
+
+    <section id="coupleResult" class="card hidden">
+      <div id="coupleShareCard">
+        <div class="pill">双人匹配报告</div>
+        <h1 id="coupleTitle"></h1>
+        <p id="coupleSummary"></p>
+
+        <h2>双人维度对比</h2>
+        <canvas id="coupleRadar" width="420" height="420"></canvas>
+
+        <h2>各维度匹配打分</h2>
+        <div id="coupleScores"></div>
+
+        <h2>优势比对</h2>
+        <div id="coupleStrengths"></div>
+
+        <h2>潜在摩擦点</h2>
+        <div id="coupleRisks"></div>
+
+        <h2>相处建议</h2>
+        <div id="coupleAdvice"></div>
+
+        <div class="footer-note">双人匹配报告 · 不判断好坏，只分析关系结构</div>
+      </div>
+
+      <button id="saveCoupleImageBtn">生成双人匹配图片</button>
+      <button id="copyCoupleBtn" class="ghost">复制匹配结果</button>
+      <button id="shareFreshTestBtn" class="ghost">分享给其他朋友一起测</button>
+      <button id="restartCoupleBtn" class="ghost">重新测试</button>
     </section>
   </main>
 
