@@ -1,14 +1,20 @@
-# 恋爱人格测试网站
+# 恋爱人格测试网站：分享图片版
 
 ## 本地使用
 解压后双击 index.html 即可运行。
 
-## 发给朋友
-- 临时测试：把整个文件夹压缩发给朋友，朋友解压后双击 index.html。
-- 正式发链接：部署到 Vercel / GitHub Pages 后，把链接发给朋友。
+## 新增功能
+结果页新增：
+- 生成分享图片
+- 手机端支持系统分享时会尝试直接拉起分享
+- 不支持系统分享时自动下载 PNG 图片
 
-## 文件
-- index.html 页面
-- style.css 样式
-- questions.js 96题题库
-- app.js 评分、雷达图、人格类型和结果分析
+## 上传 GitHub
+把以下文件全部覆盖你仓库中的同名文件：
+- index.html
+- style.css
+- questions.js
+- app.js
+- README.md
+
+Vercel 会自动重新部署。
