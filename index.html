@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>恋爱人格测试</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <section id="home" class="card hero">
+      <div class="pill">恋爱人格测试 · 96题完整版</div>
+      <h1>测测你在恋爱里是什么样的人</h1>
+      <p>这不是判断好坏，而是帮你看见自己的亲密需求、边界感、情绪稳定、沟通能力、责任感和现实规划。</p>
+      <button id="startBtn">开始测试</button>
+      <p class="small">选项：A 更像我 / B 看情况 / C 不太像我。预计 6–10 分钟。</p>
+    </section>
+
+    <section id="quiz" class="card hidden">
+      <div class="topbar">
+        <span id="moduleName"></span>
+        <span id="counter"></span>
+      </div>
+      <div class="progress"><div id="bar"></div></div>
+      <h2 id="question"></h2>
+      <div class="options">
+        <button data-score="2">A 更像我</button>
+        <button data-score="1">B 看情况</button>
+        <button data-score="0">C 不太像我</button>
+      </div>
+      <button id="prevBtn" class="ghost">上一题</button>
+    </section>
+
+    <section id="result" class="card hidden">
+      <div class="pill">你的恋爱人格报告</div>
+      <h1 id="typeTitle"></h1>
+      <p id="typeDesc"></p>
+      <canvas id="radar" width="420" height="420"></canvas>
+      <h2>八维得分</h2>
+      <div id="scores"></div>
+      <h2>你的优势</h2>
+      <div id="strengths"></div>
+      <h2>潜在风险</h2>
+      <div id="risks"></div>
+      <h2>适合你的伴侣</h2>
+      <div id="matches"></div>
+      <button id="copyBtn">复制我的结果</button>
+      <button id="restartBtn" class="ghost">重新测试</button>
+    </section>
+  </main>
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
